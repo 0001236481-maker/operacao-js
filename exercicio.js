@@ -65,18 +65,30 @@ console.log(sobraDeCookies)
    ========================================================================== */
 
 let idadeInformada =  17;
+let idadeNecessaria = 18
 let codigoDigitado ="100";
 let codigoRegistrado = 100; 
 let saldoDisponível = 250.00;
 let valorCompra = 250.00;
 
-let maioridadeCivil = idadeInformada > 18;
+let maioridadeCivil = idadeInformada > idadeNecessaria;
 console.log( maioridadeCivil )
 
 
-let codigoConfere = codigoDigitado === "100"
-console.log(codigoConfere) 
+let codigoConfere = codigoDigitado == codigoRegistrado;
+console.log(codigoConfere)
 
+
+let codigoConfere2 = codigoDigitado === codigoRegistrado;
+console.log(codigoConfere2)
+
+
+let tipoDeDado = codigoRegistrado === codigoDigitado;
+console.log(tipoDeDado)
+
+
+let temSaldo = saldoDisponível >= valorCompra
+console.log(temSaldo)
 
 
 /* ==========================================================================
@@ -100,3 +112,22 @@ console.log(codigoConfere)
    3. Acesso à área VIP: liberado para assinantes premium, ou para compras a
       partir de 300 reais que possuam cupom promocional.
    ========================================================================== */
+
+
+let valorDaCompra = 220;
+let clienteAssinantePremium = false;
+let possuiCupomPromocional = true;
+let endereçoPossuiRestriçãoEntrega = false;
+let clienteEstudante = true;
+let idade = 22;
+let idadeMaxima = 29;
+
+
+let freteGratis = valorDaCompra >= 200 || clienteAssinantePremium === true && endereçoPossuiRestriçãoEntrega;
+console.log(freteGratis)
+
+let descontoUniversitario = idade <= idadeMaxima
+console.log(descontoUniversitario)
+
+let areaVip = clienteAssinantePremium === true || valorDaCompra >= 300  && possuiCupomPromocional;
+console.log(areaVip)
